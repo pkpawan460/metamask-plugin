@@ -24,6 +24,7 @@ if(isset($_REQUEST['id'])){
 ?>
 <div style="margin-left:30px;">	
 <?php
+	echo"<p>&nbsp;</p>";
     echo"<h2 style='font-weight:bold;'>Thanks for Order. Your Order will process after payment.</h2>";
     echo"<h2 style='font-weight:bold;'>Please make the payment of ETH ".$amount."</h2>";
     echo '<p style="font-weight:700;">Etheriumn Payment Address</p>';
@@ -36,21 +37,27 @@ if(isset($_REQUEST['id'])){
 	
 	<div class="row">
 		<div class="col-md-12">
-			<div style="width:20%;float:left;">
-			    <a href="javascript:void(0);" class="paybutton" onclick="metamask()"><?php echo '<img src="' . esc_url( plugins_url( '/img/meta.png', __FILE__ ) ) . '" > '; ?></a>
+			<div class="colm">
+			   
+				<button class="btn btn-primary" onclick="metamask()">MetaMask</button>
 			</div>
-			<div style="width:20%;float:left;">
-			    <a href="javascript:void(0);"  class="coinbase" onclick="coinbase()"><?php echo '<img src="' . esc_url( plugins_url( '/img/coinbase.png', __FILE__ ) ) . '" > '; ?></a>
+			<div class="colm">
+			    <button class="btn btn-primary" onclick="coinbase()">Coinbase</button>
 			</div>
-			<div style="width:20%;float:left;">
-			    <a href="javascript:void(0);" id="connect" onclick="connect()"><?php echo '<img src="' . esc_url( plugins_url( '/img/wallet.png', __FILE__ ) ) . '" > '; ?></a>
+			<div class="colm">
+				<button class="btn btn-primary" onclick="connect()">WalletConnect</button>
 			</div>
-			<div style="width:20%;float:left;">
-			    <a href="javascript:void(0);" onclick="handleLogin(event)"><?php echo '<img src="' . esc_url( plugins_url( '/img/fortmatic.png', __FILE__ ) ) . '" > '; ?></a>
+			<div class="colm">
+			    <button class="btn btn-primary" onclick="handleLogin(event)">Fortmatic</button>
 			</div>
-			<div style="width:20%;float:left;">
-			    <a href="javascript:void(0);" onclick="venly"><?php echo '<img src="' . esc_url( plugins_url( '/img/bitski.png', __FILE__ ) ) . '" > '; ?></a>
+			<div class="colm">
+				 <button class="btn btn-primary" onclick="bitski()">Bitski</button>
 			</div>
+			
+			<div class="colm">
+			    <button class="btn btn-primary auth-loginlink">Venly</button>
+			</div>
+			 
 		</div>
 	</div>
 	<div id="status"></div>

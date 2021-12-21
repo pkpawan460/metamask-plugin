@@ -29,10 +29,16 @@ function my_plugin_assets() {
 	wp_enqueue_script("formaticCdn", 'https://cdn.jsdelivr.net/npm/fortmatic@latest/dist/fortmatic.js' );
 	wp_enqueue_script("wallet", esc_url( plugins_url( 'inc/js/wallet.js', __FILE__ ) ));
 	wp_enqueue_script("fortmatic", esc_url( plugins_url( 'inc/js/formatic.js', __FILE__ ) ));
+	wp_enqueue_script("bitski", esc_url( plugins_url( 'inc/js/bitski.js', __FILE__ ) ));
+	wp_register_style ('pliginstyle', esc_url( plugins_url( 'inc/css/style.css', __FILE__ ) ), array(),'1.0.0','all');
+	
+	//Bitski
+	wp_enqueue_script("arkane", 'https://cdn.jsdelivr.net/npm/bitski@0.11.0-beta.6/dist/bitski.min.js' );
+	wp_enqueue_style( 'pliginstyle');
 	
 	//venly
-	wp_enqueue_script("arkane", 'https://cdn.tutorialjinni.com/web3-arkane-provider/0.24.0-develop.3/web3-arkane-provider.js' );
-	
+	wp_enqueue_script("venly", 'https://unpkg.com/@venly/connect@1.33.0/dist/connect.js');
+	wp_enqueue_script("venlyprovider", esc_url( plugins_url( 'inc/js/venly-provider.js', __FILE__ ) ));
 	
 	
 }

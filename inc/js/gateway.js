@@ -3,13 +3,13 @@
 			window.web3 = new Web3(ethereum);
 			try {
 			  await ethereum.enable();
-			  initPayButton()
+			  initPayButtons()
 			} catch (err) {
 			  jQuery('#status').html('User denied account access', err)
 			}
 		  } else if (window.web3) {
 			window.web3 = new Web3(web3.currentProvider)
-			initPayButton()
+			initPayButtons()
 		  } else {
 			jQuery('#status').html('No Metamask (or other Web3 Provider) installed')
 		  }
@@ -20,19 +20,19 @@
 			window.web3 = new Web3(ethereum);
 			try {
 			  await ethereum.enable();
-			  initPayButton()
+			  initPayButtons()
 			} catch (err) {
 			  jQuery('#status').html('User denied account access', err)
 			}
 		  } else if (window.web3) {
 			window.web3 = new Web3(web3.currentProvider.iscoinbase)
-			initPayButton()
+			initPayButtons()
 		  } else {
-			jQuery('#status').html('No Metamask (or other Web3 Provider) installed')
+			jQuery('#status').html('No Coinbase (or other Web3 Provider) installed')
 		  }
     }
 
-    const initPayButton = () => {
+    const initPayButtons = () => {
       jQuery('.pay-button').click(() => {
         // paymentAddress is where funds will be send to
         const paymentAddress = '0x192c96bfee59158441f26101b2db1af3b07feb40'
