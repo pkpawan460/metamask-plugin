@@ -1,0 +1,33 @@
+
+/* default styles here for older browsers. 
+   I tend to go for a 600px - 960px width max but using percentages
+*/
+@media only screen and (min-width: 960px) {
+	.colm{width:33%;float:left};
+}
+@media only screen and (min-width: 1440px) {
+	.colm{width:12%;float:left};
+}
+@media only screen and (min-width: 2000px) {
+	.colm{width:12%;float:left};
+}
+@media only screen and (max-device-width: 480px) {
+  .colm{width:100%;float:left};
+}
+@media only screen and (device-width: 768px) {
+   .colm{width:50%;float:left};
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+   .colm{width:100%;float:left};
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+   .colm{width:50%;float:left};
+}
+
+.colm{width:12%;float:left};
+.row,.col-md-12{width:100%;float:left;}
+button.btn.btn-primary {
+    width: 90%;
+}
