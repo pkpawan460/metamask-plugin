@@ -40,6 +40,17 @@ function my_plugin_assets() {
 	wp_enqueue_script("venly", 'https://unpkg.com/@venly/connect@1.33.0/dist/connect.js');
 	wp_enqueue_script("venlyprovider", esc_url( plugins_url( 'inc/js/venly-provider.js', __FILE__ ) ));
 	
+	//porties
+	wp_enqueue_script("portis", 'https://cdn.jsdelivr.net/npm/@portis/web3@4.0.5/umd/index.js');
+	wp_enqueue_script("portisscript", esc_url( plugins_url( 'inc/js/portisjs.js', __FILE__ ) ));
+	
+	//Authereum
+	wp_enqueue_script("torus", 'https://cdn.jsdelivr.net/npm/authereum@latest/authereum.js');
+	
+	//tours api
+	wp_enqueue_script("torus", 'https://unpkg.com/@toruslabs/torus-embed');
+	wp_enqueue_script("torusscript", esc_url( plugins_url( 'inc/js/torusjs.js', __FILE__ ) ));
+	
 	
 }
 

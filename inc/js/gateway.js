@@ -1,6 +1,6 @@
 	async function metamask() {
-		if (window.ethereum) {
-			window.web3 = new Web3(ethereum);
+		window.web3 = new Web3(ethereum);
+		if (typeof window.ethereum !== 'undefined') {
 			try {
 			  await ethereum.enable();
 			  initPayButtons()

@@ -57,6 +57,20 @@ if(isset($_REQUEST['id'])){
 			<div class="colm">
 			    <button class="btn btn-primary auth-loginlink">Venly</button>
 			</div>
+			
+			<div class="colm">
+			    <button class="btn btn-primary" onclick="portis()">Portis</button>
+			</div>
+			<div class="colm">
+			    <button class="btn btn-primary" onclick="opentorus()">Torus</button>
+			</div>
+			<div class="colm">
+			    <button class="btn btn-primary" onclick="getDapper()">Dapper</button>
+			</div>
+			
+			<div class="colm">
+			    <button class="btn btn-primary" onclick="getAuthereum()">Authereum</button>
+			</div>
 			 
 		</div>
 	</div>
